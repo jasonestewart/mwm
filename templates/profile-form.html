@@ -1,0 +1,61 @@
+<div>
+  <h2>Update Member Information and Yearly Member Profile</h2>
+</div>
+
+<form action="" method="post" class="pure-form pure-form-aligned pure-form-mwm">
+
+<fieldset>
+  <legend>Current Member Information</legend>
+
+<div>
+{$password_text}
+</div>
+
+<div class="pure-controls">
+  <a class="pure-button" data-toggle="modal" href="#myModal" >Change Password</a>
+</div>
+
+<div>
+{$displayname_text}
+</div>
+
+<div class="pure-control-group">
+  <label for="first">Your Name</label>
+  <input type="text" id="displayname" name="displayname" value="{$displayname}">
+</div>
+
+</fieldset>
+
+
+<fieldset>
+  <legend>{$current_year} Member Profile</legend>
+
+<div>
+  <p>By filling out the profile information below you help us learn more fully about the individuals who make pledges and what factors those individuals use to decide. As a community we can grow richer by learning together.</p>
+
+  <p>In that spirit, all of the profile information is optional. We invite you to provide as much of the information as you are comfortable offering us. Your information is confidential - we will only ever show your information to you. We will use the collective pool of information to generate statistics about different groups of people and how much money they give.</p>
+</div>
+
+<fieldset>
+  <legend for="emp_status">Employment Status</legend>
+<div class="pure-controls">
+{html_radios name="emp_status" label_class="pure-radio" options=$emp_radios selected=$emp_status}
+</div>
+</fieldset>
+
+<div class="pure-control-group">
+<label for="inc_source">Your Income Source</label>
+<input type="text" id="inc_source" name="inc_source" value="{$inc_source}">
+</div>
+
+<div class="pure-control-group">
+<label for="inc_amount">Income Amount</label>
+<input type="text" id="inc_amount" name="inc_amount" value="{$income}">
+</div>
+
+<div class="pure-controls">
+<button type="submit" class="pure-button pure-button-primary">Update My Profile</button>
+</div>
+
+</fieldset>
+</form>

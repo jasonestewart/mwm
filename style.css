@@ -1,0 +1,115 @@
+/*
+Theme Name:     Maximum Wage Movement
+Theme URI:
+Description:    Child of 2013
+Author:         Jason Stewart
+Author URI:
+Template:       twentythirteen
+Version:        1
+*/
+
+/*
+ This @import line loads the stylesheet from the parent theme
+*/
+@import url('../twentythirteen/style.css');
+
+
+/*
+ Custom styles
+*/
+body {
+    color: #32A0A0;
+}
+
+.navbar {
+    background-color: #1E87A2;
+}   
+
+.nav-menu .current_page_item > a, .nav-menu .current_page_ancestor > a, .nav-menu .current-menu-item > a, .nav-menu .current-menu-ancestor > a {
+    color: #573023;
+    font-style: normal;
+} 
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover {
+	background-color: #2B7081;
+	color: #fff;
+}
+h1 {
+font-size: 28px;
+margin: 33px 0;
+}
+
+.site-footer {
+    background-color: #2C2805;
+    color: #686758;
+    font-size: 14px;
+    text-align: center;
+}
+
+.entry-meta a {
+    color: #B3B0DA;
+}
+
+.entry-meta a:hover {
+    color: #291861;
+}
+
+.site {
+    background: #614121;
+}
+
+.site-header .home-link {
+    color: #32A0A0;
+    font-size: 52px;
+    text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.entry-title a:hover,
+.site-header .site-title:hover {
+    text-decoration: none;
+}
+.hentry {
+padding: 20px 0 10px;
+}
+.entry-header {
+margin-bottom: 20px;
+}
+
+.post-navigation,
+.categories-links,
+.edit-link,
+header.archive-header {
+    display: none;
+}
+
+
+.site-footer .sidebar-container {
+background-color: #32A0A0;
+padding: 20px 0;
+}
+.site-footer .widget a {
+color: #502710;
+}
+
+p {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);
+}
+
+/* This is a workaround to get a label for pure radio buttons 
+ * using the legend of a nested fieldset 
+ */
+.pure-form-mwm fieldset fieldset legend {
+    display: inline;
+    color: #32A0A0;
+    font-size: 90%;
+    text-align: right;
+    border-bottom: 0px;
+    padding-top: 2.5em;
+    width: 10em;
+    float: left;
+}
+
+.pure-form-mwm fieldset fieldset .pure-controls {
+    margin-top: 0.5em;
+}

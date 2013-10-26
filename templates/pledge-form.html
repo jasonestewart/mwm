@@ -1,0 +1,47 @@
+<form onLoad="calculateRemainder();" action="" method="post" class="pure-form pure-form-aligned pure-form-mwm">
+
+<fieldset>
+  <legend>Making Your Pledge</legend>
+<p>{$pledge_text}</p>
+
+<div>When making a pledge we ask you to consider the total amount of money that you have described as income for the current year and to decide of that sum what is the <strong>maximum amount</strong> that you want to use for <em>consumption</em> and what is the <strong>maximum amount</strong> that you want to set aside for your future use (savings). That will leave you with an estimated amount that will be given away. We then ask you to decide to what charity you wish to donate that sum.
+</div>
+
+<div>
+If you want to update your declared income for {$current_year} or other aspects of your current profile, you can edit them here:
+</div>
+<div class="pure-controls">
+<a class="pure-button" href="{$edit_profile_url}">Edit Profile Info</a>
+</div>
+
+<div class="pure-control-group">
+<label for="income">Declared Income</label>
+<input type="number" id="income" name="income" value="{$income}" readonly maxlength="5" step="1">
+</div>
+
+<div class="pure-control-group">
+<label for="cons_amount">Consumption Amount</label>
+<input onChange="calculateRemainder();" type="number" id="cons_amount" name="cons_amount" value="{$cons_amount}" title="CDA Currency Format - no dollar sign, no comma(s) and no cents (.##) are allowed" maxlength="5" step="1">
+</div>
+
+<div class="pure-control-group">
+<label for="sav_amount">Savings Amount</label>
+<input onChange="calculateRemainder();" type="number" id="sav_amount" name="sav_amount" value="{$sav_amount}" title="CDA Currency Format - no dollar sign, no comma(s) and no cents (.##) are allowed" maxlength="5" step="1">
+</div>
+
+<div class="pure-control-group">
+<label for="remainder">Remaining Amount</label>
+<input type="number" id="remainder" name="remainder" readonly maxlength="5" step="1">
+</div>
+
+<div class="pure-control-group">
+<label for="charity">Intended Charity</label>
+<input type="text" id="charity" name="charity" value="{$charity}">
+</div>
+
+<div class="pure-controls">
+<button type="submit" class="pure-button pure-button-primary">{$submit}</button>
+</div>
+
+</fieldset>
+</form>
